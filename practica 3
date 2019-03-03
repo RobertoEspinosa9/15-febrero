@@ -1,0 +1,38 @@
+int LEDA = 7;
+int LEDB = 6;
+
+int b; int c;
+configuración vacía () {
+  Serial.begin (9600);
+  Serial.println ("¿Cuantas veces deseas que encienda el LED amarillo?");
+  while (Serial.available () == 0) {
+  }
+  b = Serial.parseInt ();
+  pinMode (LEDA, SALIDA);
+  ////////////////////////////////////////////////// ////////////////////
+  Serial.println ("");
+  Serial.println ("¿Cuantas veces deseas que encienda el LED verde?");
+  while (Serial.available () == 0) {
+  }
+  c = Serial.parseInt ();
+    pinMode (LEDB, SALIDA);
+}
+
+bucle de vacío () {
+
+para (int a = 0; a <b; a ++) {
+ escritura digital (LEDA, ALTA);
+retraso (300);
+escritura digital (LEDA, BAJA);
+retraso (300);
+}
+para (int a = 0; a <c; a ++) {
+escritura digital (LEDB, ALTA);
+retraso (300);
+escritura digital (LEDB, LOW);
+retraso (300); 
+}
+ 
+
+
+}
